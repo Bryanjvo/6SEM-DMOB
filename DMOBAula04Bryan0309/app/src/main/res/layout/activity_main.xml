@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Você está na tela principal"
+        tools:ignore="HardcodedText,MissingConstraints,VisualLintOverlap"
+        tools:layout_editor_absoluteX="123dp"
+        tools:layout_editor_absoluteY="139dp" />
+
+    <Button
+        android:id="@+id/bttela2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Ir para tela 2"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="HardcodedText,MissingConstraints"
+        tools:layout_editor_absoluteX="146dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
