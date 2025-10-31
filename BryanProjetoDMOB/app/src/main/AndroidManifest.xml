@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BryanProjetoDMOB">
         <activity
+            android:name=".AlterarDadosActivity"
+            android:exported="false" />
+        <activity
             android:name=".ConsultaDadosActivity"
             android:exported="false" />
         <activity
