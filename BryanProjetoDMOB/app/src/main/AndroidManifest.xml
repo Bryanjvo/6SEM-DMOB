@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BryanProjetoDMOB">
         <activity
+            android:name=".ProdutosActivity"
+            android:exported="false" />
+        <activity
             android:name=".InicioActivity"
             android:exported="false" />
         <activity
