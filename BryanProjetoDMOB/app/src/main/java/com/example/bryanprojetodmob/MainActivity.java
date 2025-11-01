@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
 
     Button btalterardados;
 
+    Button btexcluirdados;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +31,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         btcriarbanco = findViewById(R.id.btcriarbanco);
         btcadastrardados = findViewById(R.id.btcadastrardados);
+
+        btexcluirdados = findViewById(R.id.btexcluirdados);
+
+        btexcluirdados.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+
+            public void onClick(View view) {
+
+                Intent excluirDadosActivity = new Intent(MainActivity.this,
+
+                        ExcluirDadosActivity.class);
+
+                MainActivity.this.startActivity(excluirDadosActivity);
+
+            }
+
+        });
 
         btalterardados = findViewById(R.id.btalterardados);
         btalterardados.setOnClickListener(new View.OnClickListener() {

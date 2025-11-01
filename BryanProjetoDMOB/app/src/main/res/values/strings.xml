@@ -52,4 +52,13 @@
 
     <string name="emailAltera">[E-Mail]</string>
 
+    <string name="excluir_dados">Excluir Dados</string>
+
+    <string name="nomeColchetes">[Nome]</string>
+
+    <string name="telefoneColchetes">[Telefone]</string>
+
+    <string name="emailColchetes">[EMail]</string>
+
 </resources>
+
