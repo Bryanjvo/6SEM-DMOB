@@ -138,13 +138,13 @@
 
         android:textSize="18sp"
 
-        tools:text="@string/telefone" />
+        tools:text="@string/estoque" />
 
 
 
     <TextView
 
-        android:id="@+id/txttelefone"
+        android:id="@+id/estoque"
 
         android:layout_width="wrap_content"
 
@@ -178,13 +178,13 @@
 
         android:textSize="18sp"
 
-        tools:text="@string/e_mail" />
+        tools:text="@string/preco" />
 
 
 
     <TextView
 
-        android:id="@+id/txtemail"
+        android:id="@+id/preco"
 
         android:layout_width="wrap_content"
 

@@ -56,9 +56,9 @@ public class ExcluirDadosActivity extends Activity {
 
         txtnome = (TextView) findViewById(R.id.txtnome);
 
-        txttelefone = (TextView) findViewById(R.id.txttelefone);
+        txttelefone = (TextView) findViewById(R.id.estoque);
 
-        txtemail = (TextView) findViewById(R.id.txtemail);
+        txtemail = (TextView) findViewById(R.id.preco);
 
         txtstatus_registro = (TextView) findViewById(R.id.txtstatus_registro);
 
@@ -270,7 +270,7 @@ public class ExcluirDadosActivity extends Activity {
 
                     //Exclui as informações do registro na tabela
 
-                    db.execSQL("delete from usuarios where numreg = " + numreg);
+                    db.execSQL("delete from mudas where id = " + numreg);
 
                     CarregaDados();
 
@@ -334,9 +334,9 @@ public class ExcluirDadosActivity extends Activity {
 
     public void CarregaDados(){
 
-        c = db.query("usuarios",new String []
+        c = db.query("mudas",new String []
 
-                        {"numreg","nome","telefone","email"},
+                        {"id","nome","estoque","preco"},
 
                 null,null,null,null,null);
 
