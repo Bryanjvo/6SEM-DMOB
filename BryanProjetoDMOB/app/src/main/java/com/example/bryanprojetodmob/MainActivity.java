@@ -93,9 +93,9 @@ public class MainActivity extends AppCompatActivity {
                 try{
                     db = openOrCreateDatabase("banco_dados",
                             Context.MODE_PRIVATE, null);
-                    db.execSQL("create table if not exists usuarios (numreg integer primary key " +
-                            "autoincrement, nome text not null, telefone text not null, " +
-                            "email text not null)");
+                    db.execSQL("create table if not exists mudas (id integer primary key " +
+                            "autoincrement, nome text not null, estoque integer not null, " +
+                            "preco real not null)");
                     AlertDialog.Builder dialogo = new
                             AlertDialog.Builder(MainActivity.this);
                     dialogo.setTitle("Aviso")

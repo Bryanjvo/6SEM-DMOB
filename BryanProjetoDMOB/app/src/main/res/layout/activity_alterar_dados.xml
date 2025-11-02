@@ -132,7 +132,7 @@
 
         android:textSize="18sp"
 
-        tools:text="@string/telefone" />
+        tools:text="@string/estoque" />
 
 
 
@@ -146,7 +146,7 @@
 
         android:ems="10"
 
-        android:hint="@string/digite_seu_telefone"
+        android:hint="@string/digite_estoque"
 
         android:importantForAutofill="no"
 
@@ -174,7 +174,7 @@
 
         android:textSize="18sp"
 
-        tools:text="@string/e_mail" />
+        tools:text="@string/preco" />
 
 
 
@@ -188,7 +188,7 @@
 
         android:ems="10"
 
-        android:hint="@string/digite_seu_email"
+        android:hint="@string/digite_preco"
 
         android:importantForAutofill="no"
 

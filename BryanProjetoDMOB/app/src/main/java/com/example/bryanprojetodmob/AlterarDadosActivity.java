@@ -82,9 +82,9 @@ public class AlterarDadosActivity extends Activity {
 
                     Context.MODE_PRIVATE, null);
 
-            c = db.query("usuarios",new String []
+            c = db.query("mudas",new String []
 
-                            {"numreg","nome","telefone","email"},
+                            {"id","nome","estoque","preco"},
 
                     null,null,null,null,null);
 

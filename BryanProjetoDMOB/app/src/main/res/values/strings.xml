@@ -4,7 +4,7 @@
 
     <string name="trabalhando_com_banco_de_dados_no_android">Trabalhando com Banco de Dados no Android</string>
 
-    <string name="escolha_uma_das_op_es_abaixo">Escolha uma das opções abaixo:</string>
+    <string name="escolha_uma_das_op_es_abaixo">Salada:</string>
 
     <string name="criar_banco_de_dados">Criar Banco de Dados</string>
 
@@ -12,21 +12,21 @@
 
     <string name="cadastrar">Cadastrar</string>
 
-    <string name="e_mail">E-Mail:</string>
+    <string name="preco">Preço:</string>
 
     <string name="cadastro_de_usu_rio">Cadastro de Usuário</string>
 
-    <string name="telefone">Telefone:</string>
+    <string name="estoque">Estoque:</string>
 
     <string name="nome">Nome:</string>
 
     <string name="esta_aplica_o_ir_registrar_as_informa_es_do_usu_rio_no_banco_de_dados">Esta aplicação irá registrar as informações do usuário no Banco de Dados.</string>
 
-    <string name="digite_seu_nome">Digite seu nome</string>
+    <string name="digite_seu_nome">Digite o nome da Planta</string>
 
-    <string name="digite_seu_telefone">Digite seu telefone</string>
+    <string name="digite_estoque">Digite a Quantidade</string>
 
-    <string name="digite_seu_email">Digite seu email</string>
+    <string name="digite_preco">Digite o preco</string>
 
     <string name="cadastrar_dados">Cadastrar Dados</string>
 

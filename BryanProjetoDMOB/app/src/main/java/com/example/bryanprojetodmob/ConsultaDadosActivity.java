@@ -50,8 +50,8 @@ public class ConsultaDadosActivity extends AppCompatActivity {
             db = openOrCreateDatabase(
                     "banco_dados", Context.MODE_PRIVATE, null);
 
-            c = db.query("usuarios", new String[]
-                            {"nome", "telefone", "email"},
+            c = db.query("mudas", new String[]
+                            {"nome", "estoque", "preco"},
                     null, null, null, null, null);
             if (c.getCount() > 0) {
 

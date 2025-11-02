@@ -16,7 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class GravaRegistrosActivity extends AppCompatActivity {
     Button btcadastrar;
-    EditText ednome, edtelefone, edemail;
+    EditText ednome, edestoque, edpreco;
     SQLiteDatabase db;
 
     @Override
@@ -26,8 +26,8 @@ public class GravaRegistrosActivity extends AppCompatActivity {
         setContentView(R.layout.activity_grava_registros);
         btcadastrar = (Button) findViewById(R.id.btcadastrar);
         ednome = (EditText) findViewById(R.id.ednome);
-        edtelefone = (EditText) findViewById(R.id.edtelefone);
-        edemail = (EditText) findViewById(R.id.edemail);
+        edestoque = (EditText) findViewById(R.id.edestoque);
+        edpreco = (EditText) findViewById(R.id.edpreco);
         try {
             db = openOrCreateDatabase("banco_dados",
                     Context.MODE_PRIVATE, null);
@@ -38,11 +38,11 @@ public class GravaRegistrosActivity extends AppCompatActivity {
             @Override
             public void onClick(View arg0) {
                 String nome = ednome.getText().toString();
-                String telefone = edtelefone.getText().toString();
-                String email = edemail.getText().toString();
+                String estoque = edestoque.getText().toString();
+                String preco = edpreco.getText().toString();
                 try {
-                    db.execSQL("insert into usuarios(nome, telefone, email) " +
-                            "values ('"+nome+"','"+telefone+"','"+email+"')");
+                    db.execSQL("insert into mudas(nome, estoque, preco) " +
+                            "values ('"+nome+"','"+estoque+"','"+preco+"')");
                     MostraMensagem("Dados cadastrados com sucesso");
             } catch (Exception e) {
                     MostraMensagem("Erro: "+e.toString());

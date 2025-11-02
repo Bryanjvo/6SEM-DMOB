@@ -80,17 +80,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="10dp"
-            android:text="@string/telefone"
+            android:text="@string/estoque"
             android:textColor="#000000"
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/edtelefone"
+            android:id="@+id/edestoque"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:autofillHints=""
             android:ems="10"
-            android:hint="@string/digite_seu_telefone"
+            android:hint="@string/digite_estoque"
             android:importantForAutofill="no"
             android:inputType="text"
             android:minHeight="48dp"
@@ -101,17 +101,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="10dp"
-            android:text="@string/e_mail"
+            android:text="@string/preco"
             android:textColor="#000000"
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/edemail"
+            android:id="@+id/edpreco"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:autofillHints=""
             android:ems="10"
-            android:hint="@string/digite_seu_email"
+            android:hint="@string/digite_preco"
             android:importantForAutofill="no"
             android:inputType="text|textEmailAddress"
             android:minHeight="48dp"
