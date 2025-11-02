@@ -1,77 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="@drawable/fundo_folhas_sutil" > <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/primaryDarkColor"
+    android:gravity="center_vertical"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/icone_cadastro"
+        android:contentDescription="@string/todo"
+        android:layout_marginEnd="16dp" />
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:id="@+id/layoutCorFundo"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="#3ba0e2" >
-
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="72dp"
-            android:layout_height="72dp"
-            android:src="@drawable/icone_cadastro"
-            android:contentDescription="@string/todo" />
+        android:gravity="center_vertical" >
 
         <TextView
-            android:id="@+id/textView1"
+            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@string/cadastro_de_mudas_titulo"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            />
-        <LinearLayout
-            android:id="@+id/layoutCorFundo"
-            android:layout_width="fill_parent"
-            android:layout_height="match_parent"
-            android:background="#f4797d"
-            android:gravity="center" >
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/cadastro_de_usu_rio"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="#5E35B1" />
-        </LinearLayout>
+            android:textColor="@color/branco_puro"
+            android:textSize="22sp"/>
     </LinearLayout>
+</LinearLayout>
+
     <LinearLayout
-        android:id="@+id/layoutImagemFundo"
+        android:id="@+id/layoutConteudo"
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+        android:padding="16dp">
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/esta_aplica_o_ir_registrar_as_informa_es_do_usu_rio_no_banco_de_dados"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="18sp" />
+            android:text="@string/descricao_cadastro_mudas"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/cinza_texto_escuro"
+            android:layout_marginBottom="16dp"
+            android:textSize="16sp" />
+
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="10dp"
             android:text="@string/nome"
-            android:textColor="#000000"
-            android:textSize="18sp" />
+            android:textColor="@color/primaryDarkColor"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/ednome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:autofillHints=""
             android:ems="10"
             android:hint="@string/digite_seu_nome"
-            android:importantForAutofill="no"
             android:inputType="text"
-            tools:ignore="TouchTargetSizeCheck,VisualLintTextFieldSize"
-            tools:targetApi="o">
-
+            android:minHeight="48dp"
+            android:textColorHint="@color/cinza_texto_escuro"
+            android:backgroundTint="@color/verde_escuro_natureza"
+            tools:ignore="Autofill,VisualLintTextFieldSize">
             <requestFocus />
         </EditText>
 
@@ -81,53 +82,59 @@
             android:layout_height="wrap_content"
             android:paddingTop="10dp"
             android:text="@string/estoque"
-            android:textColor="#000000"
-            android:textSize="18sp" />
+            android:textColor="@color/primaryDarkColor"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/edestoque"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:autofillHints=""
             android:ems="10"
             android:hint="@string/digite_estoque"
-            android:importantForAutofill="no"
-            android:inputType="text"
+            android:inputType="number"
             android:minHeight="48dp"
-            tools:targetApi="o"
-            tools:ignore="VisualLintTextFieldSize" />
+            android:textColorHint="@color/cinza_texto_escuro"
+            android:backgroundTint="@color/verde_escuro_natureza"
+            tools:ignore="Autofill,VisualLintTextFieldSize" />
+
         <TextView
             android:id="@+id/TextView02"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="10dp"
             android:text="@string/preco"
-            android:textColor="#000000"
-            android:textSize="18sp" />
+            android:textColor="@color/primaryDarkColor"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/edpreco"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:autofillHints=""
             android:ems="10"
             android:hint="@string/digite_preco"
-            android:importantForAutofill="no"
-            android:inputType="text|textEmailAddress"
+            android:inputType="numberDecimal"
             android:minHeight="48dp"
-            tools:targetApi="o"
-            tools:ignore="VisualLintTextFieldSize" />
+            android:textColorHint="@color/cinza_texto_escuro"
+            android:backgroundTint="@color/verde_escuro_natureza"
+            tools:ignore="Autofill,VisualLintTextFieldSize" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="fill_parent"
-            android:gravity="center" >
+            android:gravity="center|bottom"
+            android:paddingBottom="24dp">
 
             <Button
                 android:id="@+id/btcadastrar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/cadastrar" />
+                android:text="@string/cadastrar"
+                android:backgroundTint="@color/primaryColor"
+                android:textColor="@color/branco_puro"
+                android:paddingStart="32dp"
+                android:paddingEnd="32dp"/>
 
         </LinearLayout>
     </LinearLayout>
