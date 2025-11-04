@@ -302,11 +302,13 @@ public class AlterarDadosActivity extends Activity {
 
                 try {
 
-                    db.execSQL("update usuarios set nome = '" + nome + "', "
+                    db.execSQL("update mudas set nome = '" + nome + "', "
 
-                            + "telefone = '" + telefone + "', email = '" + email +
+                            + "estoque = '" + telefone + "', preco = '" + email +
 
-                            "' where numreg = " + numreg);
+                            "' where id = " + numreg);
+
+                    RecarregaDados();
 
                     MostraMensagem("Dados alterados com sucesso.");
 
@@ -360,6 +362,39 @@ public class AlterarDadosActivity extends Activity {
 
         dialogo.show();
 
+    }
+
+    public void RecarregaDados() {
+        // 1. Fecha o Cursor antigo
+        if (c != null) {
+            c.close();
+        }
+
+        // 2. Abre o novo Cursor com os dados atualizados
+        c = db.query("mudas", new String[]
+                        {"id", "nome", "estoque", "preco"},
+                null, null, null, null, null);
+
+        // 3. Verifica se ainda há registros
+        if (c.getCount() > 0) {
+            // Move o cursor para a posição que o usuário estava
+            c.moveToPosition(indice - 1);
+            numreg = c.getInt(0);
+
+            // 4. Atualiza a tela com os novos dados
+            txtnome.setText(c.getString(1));
+            txttelefone.setText(c.getString(2));
+            txtemail.setText(c.getString(3));
+
+            // 5. Atualiza o status
+            txtstatus_registro.setText(indice + " / " + c.getCount());
+        } else {
+            // Caso todos os registros tenham sido excluídos
+            txtnome.setText("");
+            txttelefone.setText("");
+            txtemail.setText("");
+            txtstatus_registro.setText("Nenhum Registro");
+        }
     }
 
 }
