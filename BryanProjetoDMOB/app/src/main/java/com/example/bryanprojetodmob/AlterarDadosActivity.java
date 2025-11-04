@@ -1,5 +1,6 @@
 package com.example.bryanprojetodmob;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.app.Activity;
@@ -36,7 +37,7 @@ public class AlterarDadosActivity extends Activity {
 
     ImageView imgprimeiro, imganterior, imgproximo, imgultimo;
 
-    Button btalterardados;
+    Button btalterardados, btvoltar;
 
     int indice;
 
@@ -73,6 +74,7 @@ public class AlterarDadosActivity extends Activity {
         imgultimo = (ImageView) findViewById(R.id.imgultimo);
 
         btalterardados = (Button)findViewById(R.id.btalterardados);
+        btvoltar = (Button)findViewById(R.id.btvoltar);
 
         try {
 
@@ -119,6 +121,17 @@ public class AlterarDadosActivity extends Activity {
         catch(Exception e){
 
         }
+
+        btvoltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Cria uma Intent para a MainActivity
+                Intent intent = new Intent(AlterarDadosActivity.this, MainActivity.class);
+                startActivity(intent);
+                // Finaliza a Activity atual
+                finish();
+            }
+        });
 
 
 

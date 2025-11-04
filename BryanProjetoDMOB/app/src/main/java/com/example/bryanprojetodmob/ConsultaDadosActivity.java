@@ -1,10 +1,12 @@
 package com.example.bryanprojetodmob;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -26,6 +28,8 @@ public class ConsultaDadosActivity extends AppCompatActivity {
 
     Cursor c;
 
+    Button btvoltar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +47,7 @@ public class ConsultaDadosActivity extends AppCompatActivity {
         imganterior = (ImageView) findViewById(R.id.imganterior);
         imgproximo = (ImageView) findViewById(R.id.imgproximo);
         imgultimo = (ImageView) findViewById(R.id.imgultimo);
+        btvoltar = (Button)findViewById(R.id.btvoltar);
 
         try {
 
@@ -172,6 +177,20 @@ public class ConsultaDadosActivity extends AppCompatActivity {
 
             MostraMensagem("Erro : " + e.toString());
         }
+
+        btvoltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Cria uma Intent para a MainActivity
+                Intent intent = new Intent(ConsultaDadosActivity.this, MainActivity.class);
+                startActivity(intent);
+                // Finaliza a Activity atual
+                finish();
+            }
+        });
+
+
+
     }
 
     public void MostraMensagem(String str) {

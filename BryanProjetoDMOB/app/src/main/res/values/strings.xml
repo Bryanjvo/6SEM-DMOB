@@ -32,5 +32,6 @@
     <string name="nomeColchetes">[Nome]</string>
     <string name="telefoneColchetes">[Telefone]</string>
     <string name="emailColchetes">[EMail]</string>
+    <string name="voltar"> Voltar</string>
 
 </resources>

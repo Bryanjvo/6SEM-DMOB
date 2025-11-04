@@ -1,6 +1,7 @@
 package com.example.bryanprojetodmob;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -15,7 +16,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class GravaRegistrosActivity extends AppCompatActivity {
-    Button btcadastrar;
+    Button btcadastrar, btvoltar;
     EditText ednome, edestoque, edpreco;
     SQLiteDatabase db;
 
@@ -28,12 +29,25 @@ public class GravaRegistrosActivity extends AppCompatActivity {
         ednome = (EditText) findViewById(R.id.ednome);
         edestoque = (EditText) findViewById(R.id.edestoque);
         edpreco = (EditText) findViewById(R.id.edpreco);
+        btvoltar = (Button)findViewById(R.id.btvoltar);
         try {
             db = openOrCreateDatabase("banco_dados",
                     Context.MODE_PRIVATE, null);
         } catch (Exception e) {
             MostraMensagem("Erro: "+e.toString());
         }
+
+        btvoltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Cria uma Intent para a MainActivity
+                Intent intent = new Intent(GravaRegistrosActivity.this, MainActivity.class);
+                startActivity(intent);
+                // Finaliza a Activity atual
+                finish();
+            }
+        });
+
         btcadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {

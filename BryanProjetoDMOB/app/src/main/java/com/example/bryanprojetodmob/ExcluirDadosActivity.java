@@ -1,5 +1,6 @@
 package com.example.bryanprojetodmob;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.app.Activity;
@@ -34,7 +35,7 @@ public class ExcluirDadosActivity extends Activity {
 
     ImageView imgprimeiro, imganterior, imgproximo, imgultimo;
 
-    Button btexcluirdados;
+    Button btexcluirdados, btvoltar;
 
     int indice;
 
@@ -83,6 +84,7 @@ public class ExcluirDadosActivity extends Activity {
         imgultimo = (ImageView) findViewById(R.id.imgultimo);
 
         btexcluirdados = (Button) findViewById(R.id.btexcluirdados);
+        btvoltar = (Button)findViewById(R.id.btvoltar);
 
 
 
@@ -327,6 +329,19 @@ public class ExcluirDadosActivity extends Activity {
             MostraMensagem("Erro: " + e.toString());
 
         }
+
+        btvoltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Cria uma Intent para a MainActivity
+                Intent intent = new Intent(ExcluirDadosActivity.this, MainActivity.class);
+                startActivity(intent);
+                // Finaliza a Activity atual
+                finish();
+            }
+        });
+
+
 
     }
 

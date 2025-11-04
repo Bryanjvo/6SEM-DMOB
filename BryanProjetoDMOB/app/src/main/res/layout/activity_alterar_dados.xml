@@ -193,5 +193,18 @@
                     android:paddingEnd="32dp"/>
             </LinearLayout>
         </LinearLayout>
+
+        <Button
+            android:id="@+id/btvoltar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/voltar"
+            android:backgroundTint="@color/primaryColor"
+            android:textColor="@color/branco_puro"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            android:layout_marginTop="-16dp"/>
+
     </LinearLayout>
+
 </LinearLayout>
