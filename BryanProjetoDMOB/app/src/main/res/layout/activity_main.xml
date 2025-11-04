@@ -4,30 +4,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/fundo_folhas_sutil"> <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/primaryDarkColor" android:padding="8dp"
-    android:gravity="center_vertical"
-    android:orientation="horizontal">
+    android:background="@drawable/fundo_folhas_sutil">
 
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="64dp" android:layout_height="64dp"
-        android:src="@drawable/icone_bd" android:contentDescription="@string/todo"
-        android:layout_marginEnd="16dp" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="0dp"
-        android:layout_weight="1"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/trabalhando_com_banco_de_dados_no_android"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@color/branco_puro"
-        android:textSize="22sp" />
+        android:background="@color/primaryDarkColor"
+        android:padding="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
-</LinearLayout>
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="64dp" android:layout_height="64dp"
+            android:src="@drawable/icone_bd" android:contentDescription="@string/todo"
+            android:layout_marginEnd="16dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/trabalhando_com_banco_de_dados_no_android"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/branco_puro"
+            android:textSize="22sp" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/layoutImagemFundo"
@@ -38,67 +41,85 @@
         android:gravity="center"
         android:padding="16dp">
 
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/escolha_uma_das_op_es_abaixo"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="20sp"
-            android:textColor="@color/cinza_texto_escuro"
-            android:layout_marginBottom="24dp"
-            tools:text="Gerenciamento de Mudas" /> <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="@drawable/rounded_white_background"
+            android:padding="32dp"
+            android:elevation="8dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:gravity="center_horizontal">
 
-        <Button
-            android:id="@+id/btcriarbanco"
-            android:layout_width="220dp"
-            android:layout_height="wrap_content"
-            android:text="@string/criar_banco_de_dados"
-            android:backgroundTint="@color/primaryColor" android:textColor="@color/branco_puro"
-            android:layout_marginBottom="12dp"
-            android:padding="12dp"/>
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gerenciamento de Mudas"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="20sp"
+                android:textColor="@color/primaryDarkColor"
+                android:layout_marginBottom="24dp"
+                android:textStyle="bold"
+                />
 
-        <Button
-            android:id="@+id/btcadastrardados"
-            android:layout_width="220dp"
-            android:layout_height="wrap_content"
-            android:text="@string/cadastrar_dados"
-            android:backgroundTint="@color/primaryLightColor" android:textColor="@color/cinza_texto_escuro"
-            android:layout_marginBottom="12dp"
-            android:padding="12dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btconsultardados"
-            android:layout_width="220dp"
-            android:layout_height="wrap_content"
-            android:text="@string/consultar_dados"
-            android:backgroundTint="@color/primaryLightColor" android:textColor="@color/cinza_texto_escuro"
-            android:layout_marginBottom="12dp"
-            android:padding="12dp"/>
+                <Button
+                    android:id="@+id/btcriarbanco"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/criar_banco_de_dados"
+                    android:backgroundTint="@color/primaryColor"
+                    android:textColor="@color/branco_puro"
+                    android:layout_marginBottom="12dp"
+                    android:padding="12dp"/>
 
-        <Button
-            android:id="@+id/btalterardados"
-            android:layout_width="220dp"
-            android:layout_height="wrap_content"
-            android:text="@string/alterar_dados"
-            android:backgroundTint="@color/primaryLightColor" android:textColor="@color/cinza_texto_escuro"
-            android:layout_marginBottom="12dp"
-            android:padding="12dp"/>
+                <Button
+                    android:id="@+id/btcadastrardados"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cadastrar_dados"
+                    android:backgroundTint="@color/primaryLightColor"
+                    android:textColor="@color/cinza_texto_escuro"
+                    android:layout_marginBottom="12dp"
+                    android:padding="12dp"/>
 
-        <Button
-            android:id="@+id/btexcluirdados"
-            android:layout_width="220dp"
-            android:layout_height="wrap_content"
-            android:text="@string/excluir_dados"
-            android:backgroundTint="@color/primaryLightColor" android:textColor="@color/cinza_texto_escuro"
-            android:padding="12dp"/>
+                <Button
+                    android:id="@+id/btconsultardados"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/consultar_dados"
+                    android:backgroundTint="@color/primaryLightColor"
+                    android:textColor="@color/cinza_texto_escuro"
+                    android:layout_marginBottom="12dp"
+                    android:padding="12dp"/>
 
-    </LinearLayout>
+                <Button
+                    android:id="@+id/btalterardados"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/alterar_dados"
+                    android:backgroundTint="@color/primaryLightColor"
+                    android:textColor="@color/cinza_texto_escuro"
+                    android:layout_marginBottom="12dp"
+                    android:padding="12dp"/>
+
+                <Button
+                    android:id="@+id/btexcluirdados"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/excluir_dados"
+                    android:backgroundTint="@color/primaryLightColor"
+                    android:textColor="@color/cinza_texto_escuro"
+                    android:padding="12dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>
-

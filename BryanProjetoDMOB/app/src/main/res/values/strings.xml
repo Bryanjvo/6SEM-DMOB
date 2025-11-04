@@ -33,5 +33,9 @@
     <string name="telefoneColchetes">[Telefone]</string>
     <string name="emailColchetes">[EMail]</string>
     <string name="voltar"> Voltar</string>
+    <string name="manterMudas">Manter Mudas</string>
+    <string name="manterProdutos">Manter Produtos</string>
+    <string name="criarBancoInicio">Criar Banco de Dados</string>
+    <string name="enunciadoInicio">Bem-Vindo! Escolha o que você deseja gerenciar:</string>
 
 </resources>
