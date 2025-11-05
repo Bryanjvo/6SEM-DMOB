@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button btalterardados;
 
-    Button btexcluirdados;
+    Button btexcluirdados, btvoltar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +33,18 @@ public class MainActivity extends AppCompatActivity {
         btcadastrardados = findViewById(R.id.btcadastrardados);
 
         btexcluirdados = findViewById(R.id.btexcluirdados);
+        btvoltar = (Button)findViewById(R.id.btvoltar);
+
+        btvoltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Cria uma Intent para a MainActivity
+                Intent intent = new Intent(MainActivity.this, InicioActivity.class);
+                startActivity(intent);
+                // Finaliza a Activity atual
+                finish();
+            }
+        });
 
         btexcluirdados.setOnClickListener(new View.OnClickListener() {
 

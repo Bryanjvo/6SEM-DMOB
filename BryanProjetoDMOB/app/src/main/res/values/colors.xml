@@ -8,4 +8,5 @@
     <color name="primaryDarkColor">@color/verde_escuro_natureza</color>
     <color name="textColorPrimary">@color/branco_puro</color>
     <color name="textColorSecondary">@color/cinza_texto_escuro</color>
+    <color name="cinza_texto_claro">#9E9E9E</color>
 </resources>
