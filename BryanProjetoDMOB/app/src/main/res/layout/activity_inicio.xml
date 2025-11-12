@@ -79,17 +79,6 @@
                     android:padding="12dp" />
 
                 <Button
-                    android:id="@+id/btalterardados"
-                    android:layout_width="220dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/manterProdutos"
-                    android:backgroundTint="@color/primaryLightColor"
-                    android:textColor="@color/cinza_texto_escuro"
-                    android:layout_marginBottom="12dp"
-                    android:padding="12dp"
-                    tools:text="Manter Produtos" />
-
-                <Button
                     android:id="@+id/btexcluirdados"
                     android:layout_width="220dp"
                     android:layout_height="wrap_content"

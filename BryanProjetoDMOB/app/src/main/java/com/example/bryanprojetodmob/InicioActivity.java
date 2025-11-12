@@ -45,23 +45,6 @@ public class InicioActivity extends AppCompatActivity {
 
         });
 
-        btalterardados = findViewById(R.id.btalterardados);
-        btalterardados.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-
-            public void onClick(View args0){
-
-                Intent produtosActivity = new Intent (InicioActivity.this,
-
-                        ProdutosActivity.class);
-
-                InicioActivity.this.startActivity(produtosActivity);
-
-            }
-
-        });
-
         btcriarbanco.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
